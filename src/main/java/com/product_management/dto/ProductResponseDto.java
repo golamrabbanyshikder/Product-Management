@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class ProductResponseDto {
 	private Long id;
@@ -17,9 +18,9 @@ public class ProductResponseDto {
 	private Integer stockQuantity;
 
 	private String category;
-
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Timestamp createdAt;
-
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Timestamp updatedAt;
 
 	public Long getId() {
@@ -85,7 +86,5 @@ public class ProductResponseDto {
 	public void setUpdatedAt(Timestamp updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
-	
-	
+
 }

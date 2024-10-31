@@ -5,6 +5,8 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -36,9 +38,10 @@ public class Product {
 
 	@NotBlank
 	private String category;
-
+	
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Timestamp createdAt;
-
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Timestamp updatedAt;
 
 	public Long getId() {
