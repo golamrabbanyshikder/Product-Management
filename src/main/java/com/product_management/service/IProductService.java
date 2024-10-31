@@ -15,7 +15,7 @@ public interface IProductService {
 
 	ProductResponseDto updateProduct(Long id, ProductRequestDto productRequestDto);
 
-	void deleteProduct(Long id);
+	Long deleteProduct(Long id);
 
 	ProductResponseDto updateStock(Long id, int quantity);
 }

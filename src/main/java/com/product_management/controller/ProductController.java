@@ -64,8 +64,8 @@ public class ProductController {
 	@PutMapping("/{id}")
 	public ResponseEntity<ProductResponseDto> updateProduct(@Valid @PathVariable Long id,
 			@RequestBody ProductRequestDto product) {
-		
-		ProductResponseDto productResponseDto =productService.updateProduct(id, product);
+
+		ProductResponseDto productResponseDto = productService.updateProduct(id, product);
 		if (productResponseDto == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 		}
@@ -73,9 +73,13 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deleteProduct(@Valid @PathVariable Long id) {
-		productService.deleteProduct(id);
-		return ResponseEntity.status(HttpStatus.FOUND).body(null);
+	public ResponseEntity<String> deleteProduct(@Valid @PathVariable Long id) {
+		Long deletedId = productService.deleteProduct(id);
+
+		if (deletedId != null) {
+			return ResponseEntity.status(HttpStatus.FOUND).body("Deleted This Product");
+		}
+		return ResponseEntity.status(HttpStatus.FOUND).body("This Product not found");
 	}
 
 	@PatchMapping("/{id}/update-stock")

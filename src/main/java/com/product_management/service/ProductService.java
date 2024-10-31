@@ -102,14 +102,16 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
-	public void deleteProduct(Long id) {
+	public Long deleteProduct(Long id) {
 		try {
 			if (productRepository.existsById(id)) {
 				productRepository.deleteById(id);
+				return id;
 			}
-
+			return null;
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
 
 	}
