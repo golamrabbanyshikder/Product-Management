@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "aa73f67b-2881-44a3-b49e-02b76a836829",
+		"name": "Product-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16337808"
+	},
+	"item": [
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Dal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:9090/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Fish\",\n\t\"description\":\"Fish Categories Product\",\n\t\"price\":1,\n\t\"stockQuantity\":0,\n\t\"category\":\"Elish\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/products",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 05:48:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Fish\",\n    \"description\": \"Fish Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Elish\",\n    \"createdAt\": \"2024-10-31 05:48\",\n    \"updatedAt\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "get product all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Dal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get product all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Dal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/products",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 05:53:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Fish\",\n        \"description\": \"Fish Categories Product\",\n        \"price\": 1,\n        \"stockQuantity\": 0,\n        \"category\": \"Elish\",\n        \"createdAt\": \"2024-10-31 05:48\",\n        \"updatedAt\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Mug Dal\",\n        \"description\": \"Dal Categories Product\",\n        \"price\": 1,\n        \"stockQuantity\": 0,\n        \"category\": \"Dal\",\n        \"createdAt\": \"2024-10-31 05:51\",\n        \"updatedAt\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get product by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Dal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get product by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Dal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 05:54:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Fish\",\n    \"description\": \"Fish Categories Product\",\n    \"price\": 1,\n    \"stockQuantity\": 0,\n    \"category\": \"Elish\",\n    \"createdAt\": \"2024-10-31 05:48\",\n    \"updatedAt\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "update product by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 5,\n    \"category\": \"Dal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update product by id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 5,\n    \"category\": \"Dal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 05:57:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 5,\n    \"category\": \"Dal\",\n    \"createdAt\": \"2024-10-31 05:51\",\n    \"updatedAt\": \"2024-10-31 05:57\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update product by id and quantity",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 5,\n    \"category\": \"Dal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/products/2/update-stock?quantity=100",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products",
+						"2",
+						"update-stock"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update product by id and quantity",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 5,\n    \"category\": \"Dal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/products/2/update-stock?quantity=100",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products",
+								"2",
+								"update-stock"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 06:03:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Mug Dal\",\n    \"description\": \"Dal Categories Product\",\n    \"price\": 1000,\n    \"stockQuantity\": 100,\n    \"category\": \"Dal\",\n    \"createdAt\": \"2024-10-31 05:51\",\n    \"updatedAt\": \"2024-10-31 06:03\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/products/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 31 Oct 2024 06:18:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted This Product"
+				}
+			]
+		}
+	]
+}
